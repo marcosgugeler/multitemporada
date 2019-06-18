@@ -134,11 +134,13 @@ function show_checkout_items() {
 add_shortcode( 'checkout_items', 'show_checkout_items' );
 
 function show_politicas_items() {
-    $field = get_field_object('politicas');
+    $field = get_field_object('politicas_de_horarios');
+    print $field;
+    /*
     $colors = $field['value'];
     if( $colors ) {
     ?>
-    <h5><?php echo do_shortcode('[font_awesome icon="file" margin_right="5px"]'); ?>Políticas:</h5>
+    <h5><?php echo do_shortcode('[font_awesome icon="file" margin_right="5px"]'); ?>Políticas de horários:</h5>
     <ul>
     <?php foreach( $colors as $color ) { ?>
     <li><?php echo $field['choices'][ $color ]; ?></li>
@@ -146,8 +148,101 @@ function show_politicas_items() {
     </ul>
     <?php
     }
+    */
 }
 add_shortcode( 'politicas_items', 'show_politicas_items' );
+
+function show_acf_group_fields($group_name) {
+
+    $group_items = get_field_object($group_name);
+
+    foreach ($group_items['value'] as $key => $value) {
+        if( have_rows($group_name) ) {
+            while( have_rows($group_name) ) {
+                the_row();
+
+                $select = get_sub_field_object($key);
+                echo $select['label'].': '.$select['value']; //' {'.$select['type'].'}';
+                echo '<br/>';
+            }
+        }
+    }
+    /*
+    */
+}
+
+function show_acf_politicas_da_hospedagem() {
+    if( have_rows('politicas_da_hospedagem') ) {
+        while( have_rows('politicas_da_hospedagem') ) {
+            the_row();
+
+            echo '<div class="col-md-6">';
+
+            $select = get_sub_field_object('adaptado_p_deficientes');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('aceita_fumantes');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('aceita_criancas_menor_de_2_anos');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('aceita_criancas_e_adolescentes_ate_12_anos');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('aceita_animais');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('rouparia_de_cama');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('rouparia_de_banho');
+            echo $select['label'].': '.$select['value'];
+
+            echo '</div>';
+            echo '<div class="col-md-6">';
+
+            $select = get_sub_field_object('portaria_ou_recepcao');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('festas_e_eventos');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('horario_de_silencio');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('idade_minima_dos_hospedes');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('deposito_caucao');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('alimentacao');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('taxa_de_limpeza');
+            echo $select['label'].': '.$select['value'];
+            echo '<br/>';
+
+            $select = get_sub_field_object('valor_taxa_de_limpeza');
+            echo $select['label'].': '.$select['value'];
+
+            echo '</div>';
+        }
+    }
+}
 
 function show_politica_de_pagamento_items() {
     $field = get_field_object('politica_de_pagamento');
@@ -256,18 +351,6 @@ function estate_listing_details($post_id,$col=3){
     if ($energy_class != '')    {
         $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>'.esc_html__('Energy class','wpresidence').':</strong> ' . $energy_class . '</div>';
     }
-
-    $field = get_field_object('camas');
-    $camas = $field['value'];
-    if( $camas ) {
-        $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>'.do_shortcode('[font_awesome icon="bed" margin_right="5px"]').'Camas:</strong><ul>';
-        foreach( $camas as $cama ) {
-            $return_string.= '<li>'.$field['choices'][ $cama ].'</li>';
-        }
-        $return_string.= '</ul></div>';
-    }
-    // $return_string.= '<div class="listing_detail col-md-'.$colmd.'">'.show_cozinha_items().'</div>';
-
 
     // Custom Fields
 

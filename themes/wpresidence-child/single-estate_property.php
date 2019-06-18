@@ -139,31 +139,6 @@ if($wp_estate_global_page_template!=0 || $wp_estate_local_page_template!=0 ){
             <div class="property_categs">
                 <?php print wp_kses_post($property_category) .' '.esc_html__('in','wpresidence').' '.wp_kses_post($property_action);?>
             </div>
-            <span class="adres_area">
-                <?php
-                    $property_address =esc_html( get_post_meta($post->ID, 'property_address', true) );
-                    if($property_address!=''){
-                        print esc_html($property_address);
-                    }
-
-                    if($property_area!=''){
-                        if($property_address!='' || $property_city!=''){
-                            print ', ';
-                        }
-                        print wp_kses_post($property_area);
-                    }
-
-                    if($property_city!=''){
-                        if($property_address!=''){
-                            print ', ';
-                        }
-                        print wp_kses_post($property_city);
-                    }
-
-                    $email_link     =   'subject='.urlencode ( get_the_title() ) .'&body='. urlencode( esc_url(get_permalink()));
-                ?>
-
-            </span>
 
             <div class="prop_social">
                 <div class="no_views dashboad-tooltip" data-original-title="<?php esc_attr_e('Number of Page Views','wpresidence');?>"><i class="fa fa-eye-slash "></i><?php echo intval( get_post_meta($post->ID, 'wpestate_total_views', true) );?></div>

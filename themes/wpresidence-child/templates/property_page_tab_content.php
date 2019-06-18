@@ -16,7 +16,20 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
+
     <li role="presentation" class="active">
+        <a href="#details" aria-controls="details" role="tab" data-toggle="tab">
+            <?php
+                if($property_details_text=='') {
+                    print esc_html__('Property Details', 'wpresidence');
+                }else{
+                    print  esc_html($property_details_text);
+                }
+            ?>
+        </a>
+    </li>
+
+    <li role="presentation">
         <a href="#description" aria-controls="description" role="tab" data-toggle="tab">
         <?php
             if($property_description_text!=''){
@@ -36,18 +49,6 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
                     echo esc_html($property_adr_text);
                 } else{
                     esc_html_e('Property Address','wpresidence');
-                }
-            ?>
-        </a>
-    </li>
-
-    <li role="presentation">
-        <a href="#details" aria-controls="details" role="tab" data-toggle="tab">
-            <?php
-                if($property_details_text=='') {
-                    print esc_html__('Property Details', 'wpresidence');
-                }else{
-                    print  esc_html($property_details_text);
                 }
             ?>
         </a>
@@ -85,7 +86,12 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="description">
+
+    <div role="tabpanel" class="tab-pane active" id="details">
+        <?php print estate_listing_details($post->ID);?>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="description">
         <?php
             $content = get_the_content();
             $content = apply_filters('the_content', $content);
@@ -121,16 +127,15 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
         <?php print estate_listing_address($post->ID); ?>
     </div>
 
-    <div role="tabpanel" class="tab-pane" id="details">
-        <?php print estate_listing_details($post->ID);?>
-    </div>
-
     <div role="tabpanel" class="tab-pane" id="features">
         <?php print estate_listing_features($post->ID); ?>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="camacozinha">
-        <div class="col-md-6"><?php show_camas_items(); ?></div>
+        <div class="col-md-6">
+            <h5>Cama:</h5>
+            <?php show_acf_group_fields('camas'); ?>
+        </div>
         <div class="col-md-6">
             <h5>Cozinha:</h5>
             <ul style="list-style-type: none; margin-left: 0px;">
@@ -187,33 +192,34 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 <div class="panel-group property-panel" id="accordion_politicas">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title" id="prop_acf">Políticas</h4>
+            <h4 class="panel-title" id="prop_acf">Políticas da propriedade:</h4>
         </div>
         <div class="panel-body">
-            <div class="col-md-6"><?php show_checkin_items();?></div>
-            <div class="col-md-6"><?php show_checkout_items();?></div>
-            <div class="col-md-12">
-                <h5>Políticas:</h5>
-                <ul class="list-unstyled row" style="list-style-type: none; margin-left: 0px;">
-                <?php
-                $allCheckbox = get_field('politicas');
-                $field = get_field_object('politicas');
-                foreach($field['choices'] as $lab => $val){
-                    if(in_array($val, $allCheckbox)){
-                        $checked = 'checked = "checked"';
-                        $enable = '';
-                    } else {
-                        $checked = '';
-                        $enable = 'disabled=""';
-                    }
-                    ?>
-                    <li class="list-item col-sm-6"><input type="checkbox" value="<?php echo $lab; ?>" <?php echo $enable; ?> <?php echo $checked; ?> /><?php echo $val; ?></li>
-                <?php } ?>
-                </ul>
+            <div class="col-md-12"><h5>Políticas de horários</h5></div>
+            <?php $politicas_de_horarios = get_field('politicas_de_horarios'); ?>
+            <div class="col-md-6">
+                Horário início de check-in: <?php echo $politicas_de_horarios['horario_inicio_de_check-in']; ?>
+                <br/>
+                Horário término de check-in: <?php echo $politicas_de_horarios['horario_termino_de_check-in']; ?>
             </div>
-            <div class="col-md-6"><?php show_politica_de_pagamento_items(); ?></div>
-            <div class="col-md-6"><?php show_politica_de_cancelamento_items(); ?></div>
+            <div class="col-md-6">
+                Horário início de check-out: <?php echo $politicas_de_horarios['horario_inicio_de_check-out']; ?>
+                <br/>
+                Horário término de check-out: <?php echo $politicas_de_horarios['horario_termino_de_check-out']; ?>
+            </div>
         </div>
+
+        <div class="panel-body">
+            <div class="col-md-6">
+                <h5>Políticas da hospedagem</h5>
+                <?php show_acf_group_fields('politicas_da_hospedagem'); ?>
+            </div>
+            <div class="col-md-6">
+                <h5>Políticas de pagamento</h5>
+                <?php show_acf_group_fields('politica_de_pagamento'); ?>
+            </div>
+        </div>
+
     </div>
 </div>
 <!-- End ACF -->
