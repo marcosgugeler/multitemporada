@@ -41,14 +41,12 @@ function show_vista_do_imovel_items() {
     $field = get_field_object('vista_do_imovel');
     $colors = $field['value'];
     if( $colors ) {
-    ?>
-    <h5><?php echo do_shortcode('[font_awesome icon="eye" margin_right="5px"]'); ?>Vista do imóvel:</h5>
-    <ul>
-    <?php foreach( $colors as $color ) { ?>
-    <li><?php echo $field['choices'][ $color ]; ?></li>
-    <?php } ?>
-    </ul>
-    <?php
+        $return = '<ul>';
+        foreach( $colors as $color ) {
+            $return .= '<li>'.$field['choices'][ $color ].'</li>';
+        }
+        $return .= '</ul>';
+        return $return;
     }
 }
 add_shortcode( 'vista_do_imovel_items', 'show_vista_do_imovel_items' );
@@ -57,15 +55,13 @@ function show_localiza_se_items() {
     $field = get_field_object('localiza_se');
     $colors = $field['value'];
     if( $colors ) {
-    ?>
-    <h5><?php echo do_shortcode('[font_awesome icon="map-marker" margin_right="5px"]'); ?>Localiza-se:</h5>
-    <ul>
-    <?php foreach( $colors as $color ) { ?>
-    <li><?php echo $field['choices'][ $color ]; ?></li>
-    <?php } ?>
-    </ul>
-    <?php
+        $return = '<ul>';
+        foreach( $colors as $color ) {
+            $return .= '<li>'.$field['choices'][ $color ].'</li>';
+        }
+        $return .= '</ul>';
     }
+    return $return;
 }
 add_shortcode( 'localiza_se_items', 'show_localiza_se_items' );
 
@@ -152,22 +148,84 @@ function show_politicas_items() {
 }
 add_shortcode( 'politicas_items', 'show_politicas_items' );
 
-function show_acf_group_fields($group_name) {
+function show_acf_group_fields($group_name, $margin_left = '0px') {
 
     $group_items = get_field_object($group_name);
 
+    echo '<ul style="list-style-type: none; margin-left: '.$margin_left.';">';
     foreach ($group_items['value'] as $key => $value) {
         if( have_rows($group_name) ) {
             while( have_rows($group_name) ) {
                 the_row();
-
                 $select = get_sub_field_object($key);
-                echo $select['label'].': '.$select['value']; //' {'.$select['type'].'}';
-                echo '<br/>';
+                if ($select['type']=='number') {
+                    if ($select['value']!='0')
+                        echo '<li><input type="checkbox" checked /><strong>'.$select['label'].'</strong>: '.$select['value'].' '.$select['append'].'</li>';
+                } else if ($select['type']=='group') {
+                    echo '<li><input type="checkbox" checked /><strong>'.$select['label'].'</strong>:';
+                    show_acf_group_fields($select['key'], '20px');
+                    echo '</li>';
+                } else if ($select['type']=='checkbox') {
+                    echo '<li><input type="checkbox" checked /><strong>'.$select['label'].'</strong>:';
+                    echo '<ul style="list-style-type: none; margin-left: 20px;">';
+                        $values = $select['value'];
+                        $field = get_field_object($select['key']);
+                        $choices = $field['choices'];
+                        foreach ($choices as $value => $label) {
+                            if (in_array($value, $values)) {
+                                echo '<li><input type="checkbox" checked />'.$label.'</li>';
+                            }
+                        }
+                    echo '</ul>';
+                    echo '</li>';
+                } else {
+                    echo '<li><input type="checkbox" checked /><strong>'.$select['label'].'</strong>: '.$select['value'].'</li>';//.' {'.$select['type'].'}</li>';
+                }
             }
         }
     }
+    echo '</ul>';
     /*
+    */
+}
+
+function show_property_taxonomy($post_id, $taxonomy) {
+    $return_string = '';
+    $terms = wp_get_post_terms($post_id, $taxonomy, array( 'fields' => 'names' ));
+    // print_r($terms);
+    foreach ($terms as $key => $value) {
+        $return_string .= $value;
+    }
+    echo $return_string;
+}
+
+function show_acf_test_fields($group_name, $margin_left) {
+
+    $field = get_field_object($group_name);
+    $colors = $field['value'];
+    print_r($colors);
+    if( $colors ) {
+        echo '<ul>';
+        foreach( $colors as $color ) {
+            echo $color;
+            // echo '<li>'.$field['choices'][ $color ].'</li>';
+        }
+        echo '</ul>';
+    }
+
+
+    /*
+    echo '<ul style="list-style-type: none; margin-left: '.$margin_left.';">';
+    foreach ($group_items['choices'] as $key => $value) {
+        if( have_rows($group_name) ) {
+            while( have_rows($group_name) ) {
+                the_row();
+                $select = get_sub_field_object($key);
+                echo '<li><input type="checkbox" checked />'.$select['value'].'</li>';
+            }
+        }
+    }
+    echo '</ul>';
     */
 }
 
@@ -320,7 +378,8 @@ function estate_listing_details($post_id,$col=3){
     }
 
     $return_string='';
-    $return_string.='<div class="listing_detail col-md-'.$colmd.'" id="propertyid_display"><strong>'.esc_html__('Property Id ','wpresidence'). ':</strong> '.get_post_meta($post_id, 'codigo_imovel', true).'</div>';
+
+    $return_string.='<div class="listing_detail col-md-'.$colmd.'" id="propertyid_display"><strong>'.esc_html__('Property Id ','wpresidence'). ':</strong> '.$post_id.'</div>';
 
     if ($price !='' ){
         $return_string.='<div class="listing_detail col-md-'.$colmd.'"><strong>'.esc_html__('Price','wpresidence'). ':</strong> '. $price.'</div>';
@@ -333,6 +392,10 @@ function estate_listing_details($post_id,$col=3){
         $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>'.esc_html__('Property Lot Size','wpresidence').':</strong> ' . $property_lot_size . '</div>';
     }
     */
+
+    $return_string.='<div class="listing_detail col-md-'.$colmd.'" id="propertyid_display"><strong>'.esc_html__('Address','wpresidence'). ':</strong> '.esc_html( get_post_meta($post_id, 'property_address', true) ).'</div>';
+
+
     if ($property_rooms != ''){
         $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>'.esc_html__('Rooms','wpresidence').':</strong> ' . $property_rooms . '</div>';
     }
@@ -353,6 +416,7 @@ function estate_listing_details($post_id,$col=3){
     }
 
     // Custom Fields
+
 
 
     $i=0;
@@ -384,9 +448,11 @@ function estate_listing_details($post_id,$col=3){
         }
     }
 
+    $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>Vista do imóvel:</strong> ' . show_vista_do_imovel_items() . '</div>';
+
+    $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>Localiza-se:</strong> ' . show_localiza_se_items() . '</div>';
+
      //END Custom Fields
-
-
 
     return $return_string;
 }

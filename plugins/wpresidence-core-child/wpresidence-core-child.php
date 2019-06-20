@@ -27,11 +27,6 @@ function wpestate_estate_box() {
     </div>
 
     <div class="property_prop_half">
-        <label for="property_label">'.esc_html__('After Price Label(*for example "per month"): ','wpresidence-core').'</label><br />
-        <input type="text" id="property_label" size="40" name="property_label" value="' . esc_html(get_post_meta($mypost, 'property_label', true)) . '">
-    </div>
-
-    <div class="property_prop_half">
         <label for="property_label_before">'.esc_html__('Before Price Label(*for example "per month"): ','wpresidence-core').'</label><br />
         <input type="text" id="property_label_before" size="40" name="property_label_before" value="' . esc_html($property_label_before_default) . '">
     </div>

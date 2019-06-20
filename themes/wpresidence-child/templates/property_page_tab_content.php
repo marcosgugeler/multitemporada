@@ -42,17 +42,6 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 
     </li>
 
-    <li role="presentation">
-        <a href="#address" aria-controls="address" role="tab" data-toggle="tab">
-            <?php
-                if($property_adr_text!=''){
-                    echo esc_html($property_adr_text);
-                } else{
-                    esc_html_e('Property Address','wpresidence');
-                }
-            ?>
-        </a>
-    </li>
     <?php
     if ( count( $feature_list_array )!= 0 && count($feature_list_array)!=1 ){ ?>
         <li role="presentation">
@@ -88,7 +77,7 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
   <div class="tab-content">
 
     <div role="tabpanel" class="tab-pane active" id="details">
-        <?php print estate_listing_details($post->ID);?>
+        <?php print estate_listing_details($post->ID, 2);?>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="description">
@@ -123,17 +112,13 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 
     </div>
 
-    <div role="tabpanel" class="tab-pane" id="address">
-        <?php print estate_listing_address($post->ID); ?>
-    </div>
-
     <div role="tabpanel" class="tab-pane" id="features">
         <?php print estate_listing_features($post->ID); ?>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="camacozinha">
         <div class="col-md-6">
-            <h5>Cama:</h5>
+            <h5>Camas:</h5>
             <?php show_acf_group_fields('camas'); ?>
         </div>
         <div class="col-md-6">
@@ -146,12 +131,11 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
                 if(in_array($val, $allCheckbox)){
                     $checked = 'checked = "checked"';
                     $enable = '';
-                } else {
-                    $checked = '';
-                    $enable = 'disabled=""';
+                    ?>
+                    <li><input type="checkbox" value="<?php echo $lab; ?>" <?php echo $enable; ?> <?php echo $checked; ?> /><?php echo $val; ?></li>
+                    <?php
                 }
                 ?>
-                <li><input type="checkbox" name="month" id="month" value="<?php echo $lab; ?>" <?php echo $enable; ?> <?php echo $checked; ?> /><?php echo $val; ?></li>
             <?php } ?>
             </ul>
         </div>
@@ -170,24 +154,6 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 </div>
 
 
-
-
-<!-- ACF -->
-<div class="panel-group property-panel" id="accordion_acf">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title" id="prop_acf">Informação do Imóvel</h4>
-        </div>
-          <div class="panel-body">
-            <?php
-            show_vista_do_imovel_items();
-            show_localiza_se_items();
-            ?>
-          </div>
-    </div>
-</div>
-<!-- End ACF -->
-
 <!-- ACF -->
 <div class="panel-group property-panel" id="accordion_politicas">
     <div class="panel panel-default">
@@ -195,28 +161,36 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
             <h4 class="panel-title" id="prop_acf">Políticas da propriedade:</h4>
         </div>
         <div class="panel-body">
-            <div class="col-md-12"><h5>Políticas de horários</h5></div>
+            <div class="col-md-12"><h5><i class="fa fa-clock-o"></i>Políticas de horário</h5></div>
             <?php $politicas_de_horarios = get_field('politicas_de_horarios'); ?>
             <div class="col-md-6">
-                Horário início de check-in: <?php echo $politicas_de_horarios['horario_inicio_de_check-in']; ?>
+                <h6>Check-in</h6>
+                Horário início: <?php echo $politicas_de_horarios['horario_inicio_de_check-in']; ?>
                 <br/>
-                Horário término de check-in: <?php echo $politicas_de_horarios['horario_termino_de_check-in']; ?>
+                Horário término: <?php echo $politicas_de_horarios['horario_termino_de_check-in']; ?>
             </div>
             <div class="col-md-6">
-                Horário início de check-out: <?php echo $politicas_de_horarios['horario_inicio_de_check-out']; ?>
+                <h6>Check-out</h6>
+                Horário início: <?php echo $politicas_de_horarios['horario_inicio_de_check-out']; ?>
                 <br/>
-                Horário término de check-out: <?php echo $politicas_de_horarios['horario_termino_de_check-out']; ?>
+                Horário término: <?php echo $politicas_de_horarios['horario_termino_de_check-out']; ?>
             </div>
         </div>
 
         <div class="panel-body">
             <div class="col-md-6">
-                <h5>Políticas da hospedagem</h5>
+                <h5><i class="fa fa-bed"></i>Políticas da hospedagem</h5>
                 <?php show_acf_group_fields('politicas_da_hospedagem'); ?>
             </div>
             <div class="col-md-6">
-                <h5>Políticas de pagamento</h5>
+                <h5><i class="fa fa-credit-card"></i>Políticas de pagamento</h5>
                 <?php show_acf_group_fields('politica_de_pagamento'); ?>
+            </div>
+            <div class="col-md-6">
+                <h5><i class="fa fa-ban"></i>Políticas de cancelamento</h5>
+                <ul style="list-style-type: none; margin-left: 0px;">
+                    <li><input type="checkbox" checked /><?php echo get_field('politicas_de_cancelamento'); ?></li>
+                </ul>
             </div>
         </div>
 

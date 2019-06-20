@@ -7,8 +7,8 @@ $sidebar_class  =   $wpestate_options['sidebar_class'];
 if( ('no sidebar' != $wpestate_options['sidebar_class']) && ('' != $wpestate_options['sidebar_class'] ) && ('none' != $wpestate_options['sidebar_class']) ){
 ?>
     <div class="col-xs-12 <?php print esc_html($wpestate_options['sidebar_class']);?> widget-area-sidebar" id="primary" >
-        <?php
 
+        <?php
         if(  'estate_property' == get_post_type() && !is_tax() ){
 
             $sidebar_agent_option_value=    get_post_meta($post->ID, 'sidebar_agent_option', true);
@@ -25,7 +25,6 @@ if( ('no sidebar' != $wpestate_options['sidebar_class']) && ('' != $wpestate_opt
 
         <?php
         if ( is_active_sidebar( $wpestate_options['sidebar_name'] ) ) { ?>
-            <a href="<?php echo do_shortcode('[acf field=\'url_para_reserva\']'); ?>" class="submit_listing reservation_button">Faça Sua Reserva</a>
             <ul class="xoxo">
                 <?php dynamic_sidebar( $wpestate_options['sidebar_name'] ); ?>
             </ul>
