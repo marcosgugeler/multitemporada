@@ -1,0 +1,558 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"schedule_che",
+				"schedule_checkout"
+			],
+			[
+				"count",
+				"count_pj"
+			],
+			[
+				"lat",
+				"latitude"
+			],
+			[
+				"logradouro",
+				"logradouro_complemento"
+			],
+			[
+				"google",
+				"google_api_key"
+			],
+			[
+				"logr",
+				"logradouro_numero"
+			],
+			[
+				"lo",
+				"logradouro"
+			],
+			[
+				"cnae",
+				"cnae_id"
+			],
+			[
+				"item",
+				"item_id"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"est",
+				"estado_array"
+			],
+			[
+				"cidade",
+				"cidade_id"
+			],
+			[
+				"estado_",
+				"estado_id"
+			],
+			[
+				"val",
+				"values"
+			],
+			[
+				"grou",
+				"group_name"
+			],
+			[
+				"group",
+				"group_items"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
+				"list",
+				"list-style-type\tproperty"
+			],
+			[
+				"return",
+				"return_string"
+			],
+			[
+				"cart",
+				"cartinfo"
+			],
+			[
+				"HttpRes",
+				"HttpResponseRedirect\tclass"
+			],
+			[
+				"Http",
+				"HttpResponse"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"Htt",
+				"HttpResponse"
+			],
+			[
+				"conta",
+				"containers"
+			],
+			[
+				"free",
+				"free_message"
+			],
+			[
+				"total",
+				"total_volume"
+			],
+			[
+				"produ",
+				"product_discount"
+			],
+			[
+				"total_pe",
+				"total_peso"
+			],
+			[
+				"order",
+				"order_meta"
+			],
+			[
+				"prod",
+				"product_full_description"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"pro",
+				"product"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "themes/wpresidence-child/widgets/property_categories.php",
+			"settings":
+			{
+				"buffer_size": 6416,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core/widgets",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core-child",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence/libs",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child/templates",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child/widgets"
+	],
+	"file_history":
+	[
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child/functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core/widgets.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core-child/wpresidence-core-child.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core-child/widgets/property_categories.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence/sidebar.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core/widgets/property_categories.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence/templates/property_unit_type1.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence/js/property.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence/templates/property_list_agent.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child/templates/agent_contact.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence/libs/ajax_functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence/templates/agent_contact.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child/single-estate_property.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child/style.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child/templates/property_page_tab_content.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2-child/style.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2-child/page-import.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/header.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/index.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/single-item.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/parts/google-map.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/portal/parts/single-item-address.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/parts/post-content.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/portal/parts/header-resources.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/ait-theme/includes/ait-custom-functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/portal/functions/packages.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/themes/directory2/parts/item-marker.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/minhasc/sftp-config.json",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/fa-shortcode/readme.txt",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence/libs/listing_functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/themes/wpresidence-child/sidebar.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/fontawesome-shortcode/fontawesome-shortcode.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/fontawesome-shortcode/readme.txt",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/font_awesome-shortcode/font_awesome-shortcode.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core/shortcodes/shortcodes_install.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/font-awesome-shortcode/fontawesome-shortcode.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core/post-types/property.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/plugins/wpresidence-core/wpresidence-core.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/sftp-config.json",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/templates/property_page_tab_content.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/js/admin.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/themes/hotelbooking-child/functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/themes/hotelbooking-child/footer.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/themes/hotelbooking/footer.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/themes/hotelbooking-child/hotelbooking_hotelgrid.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/plugins/hotelbooking-toolkit/shortcodes/hotelbooking_hotelgrid.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/sftp-config.json",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking/page.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking/vc_templates/vc_row.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking/index.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking/header.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking-child/header.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking/template-parts/related-room.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking-child/template-parts/related-room.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking-child/index.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking-child/functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking/functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking/template-parts/content.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/mariadomar/hotelbooking-child/style.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Projects/hey-jude/hey.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Projects/Hey Jude/hey.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Projects/Hey Jude/readme.txt",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/templates/submit_templates/property_categories.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/templates/submit_templates/property_location.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/templates/advanced_search_type11.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/templates/front_end_submission.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/templates/property_page_tab_content.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/single-estate_property.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/user_dashboard_add.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/user_dashboard_add.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/templates/front_end_submission.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/templates/submit_templates/property_details.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/templates/submit_templates/property_location.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/templates/submit_templates/property_categories.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/libs/theme-setup.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/taxonomy.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/front_property_submit.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/style.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/libs/listing_functions.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/templates/advanced_search_type11.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence-child/sidebar.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/sidebar.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/WP/multitemporada/wpresidence/single-estate_property.php",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/sftp-config.json",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/XTRAGEL - Carrinho.html",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/BYU402816.html",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/css.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/XTRAGEL.html",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/6574712705253376.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/analytics.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/blocks.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/bootstrap.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/data.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/default.min.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/global.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/jquery-migrate.min.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/jquery.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/jquery.scrollTo.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/op-jquery-base-all.min.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/reseat.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/skip-link-focus-fix.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/style.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/style.min.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/theme.min.css",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/tracking.min.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/wp-embed.min.js",
+		"/C/Users/Marcos.Marcos-PC/Documents/Gugeler IT/Projects/HTML/XTRAGEL/assets/wp-emoji-release.min.js",
+		"/C/wamp64/www/levedigital/wp-content/themes/total-child-theme/style.css",
+		"/C/wamp64/www/levedigital/wp-content/themes/total-child-theme/woocommerce/single-product/product-thumbnails.php",
+		"/C/wamp64/www/levedigital/wp-content/themes/total-child-theme/woocommerce/templates/single-product/product-thumbnails.php",
+		"/C/wamp64/www/levedigital/wp-content/themes/total-child-theme/woocommerce/templates/single-product/product-image.php",
+		"/C/wamp64/www/levedigital/wp-content/themes/total-child-theme/woocommerce/templates/product-image.php",
+		"/C/wamp64/www/levedigital/wp-content/plugins/woocommerce/templates/single-product/product-thumbnails.php",
+		"/C/wamp64/www/levedigital/wp-content/themes/total-child-theme/woocommerce/templates/product-thumbnails.php",
+		"/C/wamp64/www/levedigital/wp-content/themes/total-child-theme/functions.php",
+		"/C/wamp64/www/levedigital/wp-content/plugins/woocommerce/templates/single-product/product-image.php",
+		"/C/wamp64/www/levedigital/wp-content/sftp-config.json",
+		"/C/wamp64/www/levedigital/wp-content/themes/Total/woocommerce/single-product/title.php",
+		"/C/wamp64/www/levedigital/wp-content/themes/sftp-config.json",
+		"/C/wamp64/www/yamanutri/wp-content/themes/sneaker-child/functions.php",
+		"/C/wamp64/www/yamanutri/wp-content/themes/sneaker-child/woocommerce/checkout/review-order.php",
+		"/C/wamp64/www/yamanutri/wp-content/themes/sneaker-child/js/theme-sneaker.js",
+		"/C/wamp64/www/yamanutri/wp-content/themes/sneaker/style.css",
+		"/C/wamp64/www/yamanutri/wp-content/themes/sneaker/js/theme-sneaker.js",
+		"/C/wamp64/www/yamanutri/wp-content/themes/sneaker/functions.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\plugins\\wpresidence-core",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\plugins\\wpresidence-core,*.php",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\plugins\\wpresidence-core",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence,*.php",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence,*.php",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence,*.php",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence,*.php",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence,-*.css",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence,*.php",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence,-*.css",
+			"C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada\\themes\\wpresidence"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"require('widgets/property_categories.php');",
+			"property_categories",
+			"Property_Categories",
+			"widget",
+			"widgets",
+			"property_categories-1-title",
+			"widget-property_categories-1-title",
+			"category_no",
+			"property_categories",
+			"property_categories-1",
+			"category_list_widget",
+			"wpestate_insert_calendar",
+			"schedule_day",
+			"schedule_wrapper",
+			"agent_contanct_form",
+			"schedule_meeting",
+			"chec",
+			"in"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"property_categories_child"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\Marcos.Marcos-PC\\Documents\\Gugeler IT\\Projects\\WP\\multitemporada"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "themes/wpresidence-child/widgets/property_categories.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5026,
+								5026
+							]
+						],
+						"settings":
+						{
+							"SL.87.region_keys":
+							[
+							],
+							"auto_name": "",
+							"incomplete_sync": null,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1747.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 174.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 307.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

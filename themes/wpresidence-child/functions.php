@@ -1,4 +1,7 @@
 <?php
+require('widgets/property_categories.php');
+register_widget('Property_Categories_Child');
+
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -447,10 +450,6 @@ function estate_listing_details($post_id,$col=3){
             $i++;
         }
     }
-
-    $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>Vista do imóvel:</strong> ' . show_vista_do_imovel_items() . '</div>';
-
-    $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>Localiza-se:</strong> ' . show_localiza_se_items() . '</div>';
 
      //END Custom Fields
 

@@ -137,7 +137,7 @@ if($wp_estate_global_page_template!=0 || $wp_estate_local_page_template!=0 ){
         ?>
         <div class="notice_area">
             <div class="property_categs">
-                <p><?php print wp_kses_post($property_category) .' '.esc_html__('in','wpresidence').' '.wp_kses_post($property_action);?> para até <?php echo get_field('ocupacao_imovel'); ?> pessoas.<br/>Bairro <?php show_property_taxonomy($post->ID, 'property_area'); ?> na cidade de <?php show_property_taxonomy($post->ID, 'property_city'); ?> em <?php show_property_taxonomy($post->ID, 'property_county_state'); ?></p>
+                <p><?php print wp_kses_post($property_category) .' em um(a) '.wp_kses_post($property_action);?> para até <?php echo get_field('ocupacao_imovel'); ?> pessoas.<br/>Bairro <?php show_property_taxonomy($post->ID, 'property_area'); ?> na cidade de <?php show_property_taxonomy($post->ID, 'property_city'); ?> em <?php show_property_taxonomy($post->ID, 'property_county_state'); ?></p>
             </div>
 
             <div class="prop_social">
@@ -153,7 +153,7 @@ if($wp_estate_global_page_template!=0 || $wp_estate_local_page_template!=0 ){
         </div>
 
 
-        <a href="<?php echo do_shortcode('[acf field=\'url_para_reserva\']'); ?>" class="submit_listing reservation_button">Faça Sua Reserva</a>
+        <a href="<?php echo do_shortcode('[acf field=\'url_para_reserva\']'); ?>" class="submit_listing reservation_button" target="_blank">Faça Sua Reserva</a>
 
 
         <?php

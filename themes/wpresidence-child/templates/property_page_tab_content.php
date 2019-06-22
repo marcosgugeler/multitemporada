@@ -59,7 +59,7 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 
 
     <li role="presentation">
-        <a href="#camacozinha" aria-controls="camacozinha" role="tab" data-toggle="tab">Cama & Coz.</a>
+        <a href="#camacozinha" aria-controls="camacozinha" role="tab" data-toggle="tab">Características</a>
     </li>
 
     <?php if ( $use_floor_plans==1 ){  ?>
@@ -120,6 +120,9 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
         <div class="col-md-6">
             <h5>Camas:</h5>
             <?php show_acf_group_fields('camas'); ?>
+            <hr>
+            <h5>Vista do imóvel:</h5>
+            <?php echo show_vista_do_imovel_items(); ?>
         </div>
         <div class="col-md-6">
             <h5>Cozinha:</h5>
@@ -138,7 +141,11 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
                 ?>
             <?php } ?>
             </ul>
+            <hr>
+            <h5>Localiza-se:</h5>
+            <?php echo show_localiza_se_items(); ?>
         </div>
+
     </div>
 
     <?php if ( 1 == 2 && $use_floor_plans==1 ){  ?>
@@ -158,36 +165,36 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 <div class="panel-group property-panel" id="accordion_politicas">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title" id="prop_acf">Políticas da propriedade:</h4>
+            <h4 class="panel-title" id="prop_acf">POLÍTICAS DA PROPRIEDADE:</h4>
         </div>
         <div class="panel-body">
-            <div class="col-md-12"><h5><i class="fa fa-clock-o"></i>Políticas de horário</h5></div>
+            <div class="col-md-12"><h5><i class="fa fa-clock-o"></i>POLÍTICAS DE HORÁRIO</h5></div>
             <?php $politicas_de_horarios = get_field('politicas_de_horarios'); ?>
             <div class="col-md-6">
                 <h6>Check-in</h6>
-                Horário início: <?php echo $politicas_de_horarios['horario_inicio_de_check-in']; ?>
+                <strong>Horário início:</strong> <?php echo $politicas_de_horarios['horario_inicio_de_check-in']; ?>
                 <br/>
-                Horário término: <?php echo $politicas_de_horarios['horario_termino_de_check-in']; ?>
+                <strong>Horário término:</strong> <?php echo $politicas_de_horarios['horario_termino_de_check-in']; ?>
             </div>
             <div class="col-md-6">
                 <h6>Check-out</h6>
-                Horário início: <?php echo $politicas_de_horarios['horario_inicio_de_check-out']; ?>
+                <strong>Horário início:</strong> <?php echo $politicas_de_horarios['horario_inicio_de_check-out']; ?>
                 <br/>
-                Horário término: <?php echo $politicas_de_horarios['horario_termino_de_check-out']; ?>
+                <strong>Horário término:</strong> <?php echo $politicas_de_horarios['horario_termino_de_check-out']; ?>
             </div>
         </div>
 
         <div class="panel-body">
             <div class="col-md-6">
-                <h5><i class="fa fa-bed"></i>Políticas da hospedagem</h5>
+                <h5><i class="fa fa-bed"></i>POLÍTICAS DA HOSPEDAGEM</h5>
                 <?php show_acf_group_fields('politicas_da_hospedagem'); ?>
             </div>
             <div class="col-md-6">
-                <h5><i class="fa fa-credit-card"></i>Políticas de pagamento</h5>
+                <h5><i class="fa fa-credit-card"></i>POLÍTICA DE PAGAMENTOS</h5>
                 <?php show_acf_group_fields('politica_de_pagamento'); ?>
             </div>
             <div class="col-md-6">
-                <h5><i class="fa fa-ban"></i>Políticas de cancelamento</h5>
+                <h5><i class="fa fa-ban"></i>POLÍTICAS DE CANCELAMENTO</h5>
                 <ul style="list-style-type: none; margin-left: 0px;">
                     <li><input type="checkbox" checked /><?php echo get_field('politicas_de_cancelamento'); ?></li>
                 </ul>
