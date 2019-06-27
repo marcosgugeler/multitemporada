@@ -4,15 +4,16 @@ global $adv_search_type;
 $adv_search_what            =   wpresidence_get_option('wp_estate_adv_search_what','');
 $show_adv_search_visible    =   wpresidence_get_option('wp_estate_show_adv_search_visible','');
 $close_class                =   '';
-$allowed_html               =   array();
+ $allowed_html              =   array();
 if($show_adv_search_visible=='no'){
     $close_class='adv-search-1-close';
 }
 
 $extended_search    =   wpresidence_get_option('wp_estate_show_adv_search_extended','');
 $extended_class     =   '';
+
 if ($adv_search_type==2){
-    $extended_class='adv_extended_class2';
+     $extended_class='adv_extended_class2';
 }
 
 if ( $extended_search =='yes' ){
@@ -33,43 +34,13 @@ if ( $extended_search =='yes' ){
         ?>
 
         <div class="col-md-10">
-            <input type="text" id="keyword_search" class="form-control" name="keyword_search"  placeholder="<?php esc_html_e('Type Keyword','wpresidence');?>" value="<?php
-
-            if(isset($_GET['keyword_search'])){
-                echo esc_attr( wp_kses($_GET['keyword_search'], $allowed_html) );
-            }
-            ?>">
+            <input type="text" id="adv_location" class="form-control" name="adv_location"  placeholder="<?php esc_html_e('Type address, state, city or area','wpresidence');?>" value="<?php
+                    if(isset($_GET['adv_location'])){
+                        echo esc_attr( wp_kses($_GET['adv_location'], $allowed_html) );
+                    }
+                ?>">
         </div>
 
-        <?php
-       if( isset($_GET['filter_search_type'][0]) && $_GET['filter_search_type'][0]!=''&& $_GET['filter_search_type'][0]!='all'  ){
-            $full_name = get_term_by('slug', esc_html( wp_kses( $_GET['filter_search_type'][0],$allowed_html) ),'property_category');
-            $adv_categ_value= $adv_categ_value1=$full_name->name;
-            $adv_categ_value1 = mb_strtolower ( str_replace(' ', '-', $adv_categ_value1));
-        }else{
-            $adv_categ_value    = esc_html__('All Types','wpresidence');
-            $adv_categ_value1   ='all';
-        }
-
-        /*
-        print '
-        <div class="col-md-2">
-            <div class="dropdown form-control " >
-                <div data-toggle="dropdown" id="adv_categ" class="filter_menu_trigger"  data-value="'.strtolower ( rawurlencode( esc_attr($adv_categ_value1) ) ).'">
-                    '.$adv_categ_value.'
-                <span class="caret caret_filter"></span> </div>
-                <input type="hidden" name="filter_search_type[]" value="';
-                if(isset($_GET['filter_search_type'][0])){
-                    echo strtolower ( esc_attr( $_GET['filter_search_type'][0] ) );
-                }
-               echo'">
-                <ul  class="dropdown-menu filter_menu" role="menu" aria-labelledby="adv_categ">
-                    '.$categ_select_list.'
-                </ul>
-            </div>
-        </div>';
-        */
-        ?>
 
         <?php
         if(isset($_GET['filter_search_action'][0]) && $_GET['filter_search_action'][0]!='' && $_GET['filter_search_action'][0]!='all'){
@@ -85,7 +56,7 @@ if ( $extended_search =='yes' ){
         print'
         <div class="col-md-2">
             <div class="dropdown form-control " >
-                <div data-toggle="dropdown" id="adv_actions" class="filter_menu_trigger" data-value="'.strtolower ( rawurlencode ( esc_attr($adv_actions_value1) ) ).'">
+                <div data-toggle="dropdown" id="adv_actions" class="filter_menu_trigger" data-value="'.strtolower ( rawurlencode ( esc_attr($adv_actions_value1)) ).'">
                     '.$adv_actions_value.'
                 <span class="caret caret_filter"></span> </div>
                 <input type="hidden" name="filter_search_action[]" value="';
@@ -104,17 +75,18 @@ if ( $extended_search =='yes' ){
 
         <div class="col-md-2">
             <div class="adv_handler"><i class="fa fa-sliders" aria-hidden="true"></i></div>
-            <input name="submit" type="submit" class="wpresidence_button" id="advanced_submit_11" value="<?php esc_html_e('Search','wpresidence');?>">
+            <input name="submit" type="submit" class="wpresidence_button" id="advanced_submit_10" value="<?php esc_html_e('Search','wpresidence');?>">
         </div>
 
-        <input type="hidden" name="is11" value="11">
+        <input type="hidden" name="is10" value="10">
+
 
         <div class="adv_search_hidden_fields ">
 
             <?php
             $custom_advanced_search         =   wpresidence_get_option('wp_estate_custom_advanced_search','');
             $adv_search_fields_no_per_row   =   ( floatval( wpresidence_get_option('wp_estate_search_fields_no_per_row') ) );
-            if ( $custom_advanced_search == 'yes' && is_array($adv_search_what)){
+            if ( $custom_advanced_search == 'yes'){
                 foreach($adv_search_what as $key=>$search_field){
                     $search_col         =   3;
                     $search_col_price   =   6;
@@ -135,16 +107,20 @@ if ( $extended_search =='yes' ){
 
                 }
             }else{
-                print wpestate_show_search_field_classic_form('main',$action_select_list,$categ_select_list ,$select_city_list,$select_area_list);
+               print wpestate_show_search_field_classic_form('main',$action_select_list,$categ_select_list ,$select_city_list,$select_area_list);
 
             }
 
+            if($extended_search=='yes'){
+               show_extended_search('adv');
+            }
             ?>
 
-       </div>
+        </div>
 
 
-     <?php include( locate_template('templates/preview_template.php') ); ?>
+        <?php include( locate_template('templates/preview_template.php') ); ?>
+
     </form>
-       <div style="clear:both;"></div>
+    <div style="clear:both;"></div>
 </div>

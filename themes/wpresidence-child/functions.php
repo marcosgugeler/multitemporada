@@ -396,9 +396,6 @@ function estate_listing_details($post_id,$col=3){
     }
     */
 
-    $return_string.='<div class="listing_detail col-md-'.$colmd.'" id="propertyid_display"><strong>'.esc_html__('Address','wpresidence'). ':</strong> '.esc_html( get_post_meta($post_id, 'property_address', true) ).'</div>';
-
-
     if ($property_rooms != ''){
         $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>'.esc_html__('Rooms','wpresidence').':</strong> ' . $property_rooms . '</div>';
     }
@@ -409,7 +406,6 @@ function estate_listing_details($post_id,$col=3){
         $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>'.esc_html__('Bathrooms','wpresidence').':</strong> ' . $property_bathrooms . '</div>';
     }
 
-
     // energy saving
     if ($energy_index != '')    {
         $return_string.= '<div class="listing_detail col-md-'.$colmd.'"><strong>'.esc_html__('Energy index','wpresidence').':</strong> ' . $energy_index . ' kWh/m²a</div>';
@@ -419,9 +415,6 @@ function estate_listing_details($post_id,$col=3){
     }
 
     // Custom Fields
-
-
-
     $i=0;
     $custom_fields = wpresidence_get_option( 'wp_estate_custom_fields', '');
 
@@ -450,6 +443,9 @@ function estate_listing_details($post_id,$col=3){
             $i++;
         }
     }
+
+
+    $return_string.='<div class="listing_detail col-md-'.$colmd.'" id="propertyid_display"><strong>'.esc_html__('Address','wpresidence'). ':</strong> '.esc_html( get_post_meta($post_id, 'property_address', true) ).'</div>';
 
      //END Custom Fields
 

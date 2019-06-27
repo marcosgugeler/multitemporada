@@ -123,6 +123,7 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
             <hr>
             <h5>Vista do imóvel:</h5>
             <?php echo show_vista_do_imovel_items(); ?>
+            <hr>
         </div>
         <div class="col-md-6">
             <h5>Cozinha:</h5>
@@ -175,12 +176,14 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
                 <strong>Horário início:</strong> <?php echo $politicas_de_horarios['horario_inicio_de_check-in']; ?>
                 <br/>
                 <strong>Horário término:</strong> <?php echo $politicas_de_horarios['horario_termino_de_check-in']; ?>
+                <hr>
             </div>
             <div class="col-md-6">
                 <h6>Check-out</h6>
                 <strong>Horário início:</strong> <?php echo $politicas_de_horarios['horario_inicio_de_check-out']; ?>
                 <br/>
                 <strong>Horário término:</strong> <?php echo $politicas_de_horarios['horario_termino_de_check-out']; ?>
+                <hr>
             </div>
         </div>
 
@@ -188,16 +191,19 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
             <div class="col-md-6">
                 <h5><i class="fa fa-bed"></i>POLÍTICAS DA HOSPEDAGEM</h5>
                 <?php show_acf_group_fields('politicas_da_hospedagem'); ?>
+                <hr>
             </div>
             <div class="col-md-6">
                 <h5><i class="fa fa-credit-card"></i>POLÍTICA DE PAGAMENTOS</h5>
                 <?php show_acf_group_fields('politica_de_pagamento'); ?>
+                <hr>
             </div>
             <div class="col-md-6">
                 <h5><i class="fa fa-ban"></i>POLÍTICAS DE CANCELAMENTO</h5>
                 <ul style="list-style-type: none; margin-left: 0px;">
                     <li><input type="checkbox" checked /><?php echo get_field('politicas_de_cancelamento'); ?></li>
                 </ul>
+                <hr>
             </div>
         </div>
 
