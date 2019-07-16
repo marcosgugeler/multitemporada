@@ -161,7 +161,9 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
 
 </div>
 
-
+<?php
+if (is_temporada($post->ID)) {
+?>
 <!-- ACF -->
 <div class="panel-group property-panel" id="accordion_politicas">
     <div class="panel panel-default">
@@ -210,12 +212,9 @@ $header_type                    =   get_post_meta ( $post->ID, 'header_type', tr
     </div>
 </div>
 <!-- End ACF -->
-
-
-
-
-<!-- Video -->
 <?php
+}
+
 $video_id=  get_post_meta ( $post->ID, 'embed_video_id', true);
 if ( $video_id!='' ){
 ?>

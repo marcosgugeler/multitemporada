@@ -152,9 +152,9 @@ if($wp_estate_global_page_template!=0 || $wp_estate_local_page_template!=0 ){
             </div>
         </div>
 
-
+        <?php if (is_temporada($post->ID)) { ?>
         <a href="<?php echo do_shortcode('[acf field=\'url_para_reserva\']'); ?>" class="submit_listing reservation_button" target="_blank">Faça Sua Reserva</a>
-
+        <?php } ?>
 
         <?php
         $local_pgpr_slider_type_status  =   get_post_meta($post->ID, 'local_pgpr_slider_type', true);

@@ -5,6 +5,18 @@ register_widget('Property_Categories_Child');
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
+function is_temporada($post_id) {
+    $is_temporada = false;
+    $categories = get_the_terms( $post_id, 'property_action_category' );
+    foreach ( $categories as $category ) {
+        if ($category->slug == 'temporada') {
+            $is_temporada = true;
+            break;
+        }
+    }
+    return $is_temporada;
+}
+
 
 if ( !function_exists( 'wpestate_chld_thm_cfg_parent_css' ) ):
     function wpestate_chld_thm_cfg_parent_css() {
